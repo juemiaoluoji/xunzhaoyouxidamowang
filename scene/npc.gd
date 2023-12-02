@@ -25,7 +25,7 @@ func intro():
 func dialogue(text: String):
     # var answer = "回答:" + text
     var check_message = "将给出一段故事背景，并给出对话对象的介绍以及我对他说的一句话，请你判断我要说的话是否符合故事背景，\n" + \
-    "符合请回答“是”，不符合请回答“不是”，你只需要回答“是”或者“不是”。\n" + \
+    "符合请回答“是”，不符合请回答“不是”，请注意，你必须先回答“是”或者“不是”。\n" + \
     "故事背景：{str}\n".format({"str": GlobalInfo.BACKFGROUND_INFO}) + \
     "对话的对象：{job}， 负责{job_desc}\n".format({"job": job, "job_desc": job_desc}) + \
     "对话：{str}".format({"str":text})

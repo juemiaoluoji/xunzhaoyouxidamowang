@@ -30,15 +30,15 @@ texture = ExtResource("5_mgguo")
 
 [node name="NpcTextUI" parent="." instance=ExtResource("4_x0pcn")]
 
-[node name="Magician" parent="." instance=ExtResource("3_4bhwx")]
-position = Vector2(342, -36)
-job = "魔法师"
-job_desc = "传授各种魔法"
-texture = ExtResource("7_hs338")
-
 [node name="Player" parent="." instance=ExtResource("3_5e501")]
 position = Vector2(212, 39)
 
 [node name="TextTimer" type="Timer" parent="."]
 wait_time = 0.1
 one_shot = true
+
+[node name="Magician" parent="." instance=ExtResource("3_4bhwx")]
+position = Vector2(321, -30)
+job = "魔法师"
+job_desc = "教授冒险者魔法"
+texture = ExtResource("7_hs338")

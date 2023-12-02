@@ -36,7 +36,6 @@ func call_model(data: String):
         "messages": message,
         "system": system
     }
-    print(params)
     http_request.request(model_url, ["Content-Type: application/json"], HTTPClient.METHOD_POST, JSON.stringify(params))
     res_array = await http_request.request_completed
     body = res_array[3]
@@ -51,5 +50,4 @@ func call_model(data: String):
             "role": "assistant",
             "content": result
         })
-    print(response)
     return result
