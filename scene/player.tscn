@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=3 uid="uid://363440hpu0c8"]
+
+[ext_resource type="Script" path="res://scene/player.gd" id="1_ys3g2"]
+[ext_resource type="Texture2D" uid="uid://bu7i4f7x7q33i" path="res://Tiles2/tile_0085.png" id="2_af5d6"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_77lyh"]
+radius = 30.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qqvk3"]
+
+[node name="Player" type="CharacterBody2D" groups=["player"]]
+scale = Vector2(2, 2)
+script = ExtResource("1_ys3g2")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_af5d6")
+
+[node name="TextEdit" type="TextEdit" parent="."]
+visible = false
+offset_left = 1.0
+offset_top = -21.0
+offset_right = 151.0
+offset_bottom = -1.0
+theme_override_font_sizes/font_size = 10
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CircleShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_77lyh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+shape = SubResource("CapsuleShape2D_qqvk3")

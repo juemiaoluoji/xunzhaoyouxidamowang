@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://bfuhmbxp1itms"]
+
+[ext_resource type="Script" path="res://addons/qianfanmodelrequest/model_request.gd" id="1_oa5pk"]
+
+[node name="ModelRequest" type="Node"]
+script = ExtResource("1_oa5pk")
+
+[node name="HTTPRequest" type="HTTPRequest" parent="."]

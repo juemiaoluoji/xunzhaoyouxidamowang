@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://divaeoo1j6aox"]
+
+[ext_resource type="Script" path="res://scene/npc.gd" id="1_0nxqg"]
+[ext_resource type="Script" path="res://addons/qianfanmodelrequest/model_request.gd" id="3_lpo83"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_it20m"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ni65q"]
+radius = 30.0
+
+[node name="NPC" type="CharacterBody2D"]
+scale = Vector2(2, 2)
+script = ExtResource("1_0nxqg")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_it20m")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CircleShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_ni65q")
+
+[node name="ModelRequest" type="Node" parent="."]
+script = ExtResource("3_lpo83")
+
+[node name="CheckRequest" type="Node" parent="."]
+script = ExtResource("3_lpo83")
+
+[node name="HTTPRequest" type="HTTPRequest" parent="."]

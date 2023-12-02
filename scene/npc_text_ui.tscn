@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://dt1v53i7krbff"]
+
+[node name="NpcTextUI" type="CanvasLayer"]
+
+[node name="TextLabel" type="RichTextLabel" parent="."]
+custom_minimum_size = Vector2(20, 40)
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_vertical = 4
+theme_override_font_sizes/normal_font_size = 20
+theme_override_font_sizes/mono_font_size = 20
